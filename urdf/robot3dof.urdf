@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<robot name="realsense_bot">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.045 0.09 0.03"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <link name="servo_bottom">
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.015"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.04"/>
+    </visual>
+  </link>
+
+
+
+
+  <link name="U_Link">
+    <visual>
+      <geometry>
+        <box size="0.015 0.03 0.064"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.097"/>
+    </visual>
+  </link>
+
+
+
+  <link name="servo_mid">
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.015"/>
+      </geometry>
+      <origin rpy="1.57 0 0" xyz="0 0 0.13"/>
+    </visual>
+  </link>
+
+
+
+  <link name="servo_up">
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.015"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="-0.0237 -0.009 0.147"/>
+    </visual>
+  </link>
+
+
+  <link name="up_mount">
+    <visual>
+      <geometry>
+        <box size="0.05 0.148 0.05"/>
+      </geometry>
+      <origin rpy="0 0.785 0" xyz="-0.0237 -0.009 0.1988"/>
+    </visual>
+  </link>
+
+
+  <joint name="base_to_Servo_B" type="fixed">
+    <parent link="base_link"/>
+    <child link="servo_bottom"/>
+  </joint>
+
+  <joint name="servo_b_to_U_link" type="continuous">
+    <parent link="servo_bottom"/>
+    <child link="U_Link"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <joint name="U_link_to_Servo_mid" type="fixed">
+    <parent link="U_Link"/>
+    <child link="servo_mid"/>
+  </joint>
+
+  <joint name="servo_mid_to_servo_up" type="fixed">
+    <parent link="servo_mid"/>
+    <child link="servo_up"/>
+  </joint>
+
+  <joint name="U_link_to_survo_mid" type="continuous">
+    <parent link="U_Link"/>
+    <child link="servo_mid"/>
+    <axis xyz="0 1 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+
+
+  <joint name="servo_up_up_mount" type="continuous">
+    <parent link="servo_up"/>
+    <child link="up_mount"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+
+
+</robot>

@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<robot name="realsense_bot">
+
+
+
+  <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+  <material name="red">
+    <color rgba="1 0 0 1"/>
+  </material>
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.045 0.09 0.03"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <material name="blue"/>
+    </visual>
+  </link>
+
+  <link name="servo_bottom">
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.015"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <link name="U_Link">
+    <visual>
+      <geometry>
+        <box size="0.015 0.03 0.064"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <link name="servo_mid">
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.015"/>
+      </geometry>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <link name="servo_up">
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.015"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <link name="up_mount">
+    <visual>
+      <geometry>
+        <box size="0.05 0.148 0.05"/>
+      </geometry>
+      <origin rpy="0 0.785 0" xyz="0 0 0"/>
+      <material name="white"/>
+    </visual>
+  </link>
+
+
+
+  <joint name="base_to_Servo_B" type="fixed">
+    <parent link="base_link"/>
+    <child link="servo_bottom"/>
+    <origin xyz="0 0 0.04"/>
+  </joint>
+
+  <joint name="Joint_1" type="revolute">
+    <parent link="servo_bottom"/>
+    <child link="U_Link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="0.5"/>
+    <origin xyz="0 0 0.056"/>
+  </joint>
+
+  <joint name="Joint_2" type="revolute">
+    <parent link="U_Link"/>
+    <child link="servo_mid"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="0.5"/>
+    <origin xyz="0 0 0.036" rpy="0 0.67 0"/>
+  </joint>
+
+  <joint name="servo_mid_to_servo_up" type="fixed">
+    <parent link="servo_mid"/>
+    <child link="servo_up"/>
+    <origin xyz="-0.0237 -0.009 0"/>
+  </joint>
+
+  <joint name="Joint_3" type="revolute">
+    <parent link="servo_up"/>
+    <child link="up_mount"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="0.5"/>
+    <origin xyz="-0.0237 -0.009 0.04"/>
+  </joint>
+
+</robot>
