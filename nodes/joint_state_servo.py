@@ -23,7 +23,7 @@ def callback(msg):
     joint_poses = [math.degrees(joint_1)+90,math.degrees(-joint_2)+90,math.degrees(joint_3)+90]
     cmd.data = joint_poses
     servo.publish(cmd)
-    # print(joint_poses)
+    # print(msg.name)
 
 if __name__=='__main__':
     rospy.init_node('JointState_Servo')
