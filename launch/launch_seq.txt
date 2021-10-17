@@ -10,3 +10,4 @@ rosrun rqt_reconfigure rqt_reconfigure
 
 roslaunch yolo_detect.launch
 rosrun realsense_bot yolo_pixel_to_3Dpoint.py
+rosrun realsense_bot object_follow.py
