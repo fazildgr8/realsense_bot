@@ -7,6 +7,14 @@
 <arg name="unite_imu_method" value="linear_interpolation"/>
 <arg name="enable_gyro" value="true"/>
 <arg name="enable_accel" value="true"/>
+
+<arg name="depth_width" value="640"/>
+<arg name="depth_height" value="480"/>
+<arg name="depth_fps" value="30"/>
+<arg name="color_width" value="640"/>
+<arg name="color_height" value="480"/>
+<arg name="color_fps" value="30"/>
+
 </include>
 
 <node name="imu_filter_madgwick" pkg="imu_filter_madgwick" type="imu_filter_node" args="_use_mag:=false _publish_tf:=false _world_frame=world /imu/data_raw:=/camera/imu /imu/data:=/rtabmap/imu"/>

@@ -1,0 +1,21 @@
+
+<launch>
+	<node name="find_object_3d" pkg="find_object_2d" type="find_object_2d" output="screen">
+		<param name="gui" value="true"/>
+		<param name="subscribe_depth" value="true"/>
+		<param name="session_path" value="$(find realsense_bot)/sessions/ses.bin"/>
+		<param name="approx_sync" value="false"/>
+		<param name="objects_path" value=""/>
+		<remap from="rgb/image_rect_color" to="/camera/color/image_raw"/>
+		<remap from="depth_registered/image_raw" to="/camera/depth/image_rect_raw"/>
+		<remap from="depth_registered/camera_info" to="/camera/depth/camera_info"/>
+	</node>
+
+	<node name="tf_example" pkg="find_object_2d" type="tf_example" output="screen">
+	    <param name="map_frame_id" value="/camera_link"/>
+		<param name="object_prefix" value="object"/>
+	</node>
+
+<!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find realsense2_camera)/rviz/pointcloud.rviz" required="true" /> -->
+
+</launch>
