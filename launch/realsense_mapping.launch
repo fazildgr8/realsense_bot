@@ -1,0 +1,24 @@
+<launch>
+
+<include file="$(find realsense2_camera)/launch/rs_camera.launch" >
+<arg name="filters" value="pointcloud"/>
+<!-- <arg name="initial_reset" value="true"/> -->
+<arg name="align_depth" value="true"/>
+<arg name="unite_imu_method" value="linear_interpolation"/>
+<arg name="enable_gyro" value="true"/>
+<arg name="enable_accel" value="true"/>
+</include>
+
+<node name="imu_filter_madgwick" pkg="imu_filter_madgwick" type="imu_filter_node" args="_use_mag:=false _publish_tf:=false _world_frame=world /imu/data_raw:=/camera/imu /imu/data:=/rtabmap/imu"/>
+
+<include file="$(find rtabmap_ros)/launch/rtabmap.launch">
+<arg name="rtabmap_args" value="--delete_db_on_start --Optimizer/GravitySigma 0.3"/>
+<arg name="depth_topic" value="/camera/aligned_depth_to_color/image_raw"/>
+<arg name="rgb_topic" value="/camera/color/image_raw"/>
+<arg name="camera_info_topic" value="/camera/color/camera_info"/>
+<arg name="approx_sync" value="true"/>
+<arg name="frame_id" value="world"/>
+
+</include>
+
+</launch>
