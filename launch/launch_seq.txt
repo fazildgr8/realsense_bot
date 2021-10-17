@@ -1,9 +1,12 @@
 Realsennse Bot Launches/Commands 
 ********************************
 
-roslaunch realsense2_camera rs_camera.launch align_depth:=true depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=30
+roslaunch realsense2_camera rs_camera.launch filters:=pointcloud align_depth:=true depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=30
 roslaunch realsense_bot robot_visualize_control.launch
 roslaunch realsense_bot realsense_mapping.launch
 rosrun realsense_bot mapping_seq.py
 rosrun rqt_reconfigure rqt_reconfigure
+
+
 roslaunch yolo_detect.launch
+rosrun realsense_bot yolo_pixel_to_3Dpoint.py

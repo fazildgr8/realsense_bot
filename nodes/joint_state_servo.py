@@ -31,7 +31,7 @@ if __name__=='__main__':
     rate = rospy.Rate(10.0)
     cmd = Int16MultiArray()
     servo = rospy.Publisher('/servo', Int16MultiArray,queue_size=10) # Publish Command
-    rospy.Subscriber("joint_states", JointState, callback) # Publish Joint States to Rosserial
+    rospy.Subscriber("joint_states", JointState, callback)
     rospy.spin()
     # cmd.data = [90,90,90] # Robot Home POSITION
     # servo.publish(cmd)

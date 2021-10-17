@@ -57,7 +57,8 @@ def convert_depth_to_phys_coord_using_realsense(x, y, depth, cameraInfo):
     #_intrinsics.model = cameraInfo.distortion_model
     _intrinsics.model  = pyrealsense2.distortion.none
     _intrinsics.coeffs = [i for i in cameraInfo.D]  
-    result = pyrealsense2.rs2_deproject_pixel_to_point(_intrinsics, [x, y], depth)  #result[0]: right, result[1]: down, result[2]: forward
+    result = pyrealsense2.rs2_deproject_pixel_to_point(_intrinsics, [x, y], depth)  
+    #result[0]: right, result[1]: down, result[2]: forward
     return result
 
 def cam_info(msg):
@@ -88,7 +89,7 @@ def show_image(img):
     cv2.waitKey(3)
 
 if __name__=='__main__':
-    rospy.init_node('yolo_handler')
+    rospy.init_node('yolo_pixel_to_3Dpoint')
     rospy.Subscriber("/darknet_ros/bounding_boxes", BoundingBoxes, callback) 
     rospy.Subscriber("/darknet_ros/found_object", ObjectCount, object_count) 
     rospy.Subscriber("/camera/aligned_depth_to_color/image_raw", Image, vis_callback) 
@@ -102,5 +103,5 @@ if __name__=='__main__':
                             rospy.Time.now(),
                             "object",
                             "camera_link")
-    rate.sleep()
-    # rospy.spin()
+    # rate.sleep()
+    rospy.spin()
