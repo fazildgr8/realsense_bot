@@ -5,7 +5,7 @@ This is a ROS package for Intel realsense D435i with 3-DOF Manipulator robot tha
 ![ROBOT_Description](https://user-images.githubusercontent.com/24454678/138001080-06d19e65-3412-4b5f-99dd-e5860527b5dc.png)
 
 ## Manual Joint Control with PCL Perception
-''roslaunch realsense_bot robot_visualize_control.launch''
+'roslaunch realsense_bot robot_visualize_control.launch'
 ![manual_perception](https://user-images.githubusercontent.com/24454678/138002158-53b967c4-bc66-44af-9593-714cdea28551.gif)
 
 ## Autonomous Object Tracking and 3D Pose Estimation
