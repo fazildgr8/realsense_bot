@@ -9,6 +9,7 @@ Launch the Robot in RVIZ with Manual Joint Control
 '''
 roslaunch realsense_bot robot_visualize_control.launch
 '''
+
 Launch the IntelRealsense Camera node to start the PCL Perception
 '''
 roslaunch realsense2_camera rs_camera.launch filters:=pointcloud align_depth:=true depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=30
