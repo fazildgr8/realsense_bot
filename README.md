@@ -21,7 +21,8 @@ Launch the Yolo detector node to produce Object Detection and Bounding Boxes Mes
 ```
 roslaunch yolo_detect.launch
 ```
-Launch the node which deprojects the 2D detected object in 3D using rs2_pixel_to_point_deprojection(...)
+Launch the node which deprojects the 2D detected object in 3D using rs2_pixel_to_point_deprojection(...) with the Node **/yolo_pixel_to_3Dpoint**
+![pose_estimation_graph](https://user-images.githubusercontent.com/24454678/138003646-bfd8a96f-2faa-4301-a390-e48fd1e22078.png)
 ```
 rosrun realsense_bot yolo_pixel_to_3Dpoint.py
 ```
@@ -37,3 +38,4 @@ roslaunch realsense_bot robot_visualize_control.launch
 roslaunch realsense_bot realsense_mapping.launch
 ```
 ![rtab_map_room](https://user-images.githubusercontent.com/24454678/138001579-007b174b-27c4-4620-b38a-7e0a500d18b2.gif)
+![rtab_mapping_graph](https://user-images.githubusercontent.com/24454678/138003662-a99dd86d-7da0-41cf-b990-0128b07e2461.png)
