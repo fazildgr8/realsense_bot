@@ -1,5 +1,5 @@
 # realsense_bot
-This is a ROS package for Intel realsense D435i with 3-DOF Manipulator robot that can be used for Indoor Mapping and localization of objects in the world frame with an added advantage of the robot's dexterity. The 3-DOF Manipulator is a self-built custom robot where the URDF with the depth sensor is included. The package covers the Rosserial based nodes to control the robot's Joint States and PCL pipelines required for autonomous mapping/Localization/Tracking of the objects in real-time. <br/>
+This is a ROS package for Intel realsense D435i with 3-DOF Manipulator robot that can be used for Indoor Mapping and localization of objects in the world frame with an added advantage of the robot's dexterity. The 3-DOF Manipulator is a self-built custom robot where the URDF with the depth sensor is included. The package covers the Rosserial communication with Arduino nodes to control the robot's Joint States and PCL pipelines required for autonomous mapping/Localization/Tracking of the objects in real-time. <br/>
 
 ## Robot URDF Model
 ![ROBOT_Description](https://user-images.githubusercontent.com/24454678/138001080-06d19e65-3412-4b5f-99dd-e5860527b5dc.png)
@@ -39,3 +39,23 @@ roslaunch realsense_bot realsense_mapping.launch
 ```
 ![rtab_map_room](https://user-images.githubusercontent.com/24454678/138001579-007b174b-27c4-4620-b38a-7e0a500d18b2.gif)
 ![rtab_mapping_graph](https://user-images.githubusercontent.com/24454678/138003662-a99dd86d-7da0-41cf-b990-0128b07e2461.png)
+
+## Setup Info
+### ROS/Python Library Prerequisites
+```
+sudo apt-get install ros-$ROS_DISTRO-realsense2-camera
+sudo apt-get install ros-$ROS_DISTRO-realsense2-description
+sudo apt install ros-$ROS_DISTRO-image-transport-plugins
+sudo apt install ros-$ROS_DISTRO-rtabmap-ros
+sudo apt install ros-$ROS_DISTRO-rosserial
+pip install pyrealsense2
+pip install opencv-python
+pip install 
+cd catkin_ws/src
+git clone https://github.com/ccny-ros-pkg/imu_tools
+git clone https://github.com/leggedrobotics/darknet_ros
+cd .
+catkin_make
+```
+The **Arduino** code file required for flashing can be found in `arduino/ros_servo_3dof.ino` <br/>
+Connect the **three Servo's** signal pin the to `9 10 11` pins of the Arduino. The pin configuration can be modified within `ros_servo_3dof.ino`.
