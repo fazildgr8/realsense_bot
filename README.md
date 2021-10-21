@@ -39,3 +39,18 @@ roslaunch realsense_bot realsense_mapping.launch
 ```
 ![rtab_map_room](https://user-images.githubusercontent.com/24454678/138001579-007b174b-27c4-4620-b38a-7e0a500d18b2.gif)
 ![rtab_mapping_graph](https://user-images.githubusercontent.com/24454678/138003662-a99dd86d-7da0-41cf-b990-0128b07e2461.png)
+
+## Setup Info
+### ROS/Python Library Prerequisites
+```
+sudo apt-get install ros-$ROS_DISTRO-realsense2-camera
+sudo apt-get install ros-$ROS_DISTRO-realsense2-description
+sudo apt install ros-$ROS_DISTRO-image-transport-plugins
+sudo apt install ros-$ROS_DISTRO-rtabmap-ros
+sudo apt install ros-$ROS_DISTRO-rosserial
+cd catkin_ws/src
+git clone https://github.com/ccny-ros-pkg/imu_tools
+git clone https://github.com/leggedrobotics/darknet_ros
+cd .
+catkin_make
+```
