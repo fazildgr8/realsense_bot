@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  tf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -120,6 +121,9 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+# add_executable(pixel_to_3Dpoint src/pixel_to_3Dpoint.cpp)
+# target_link_libraries(pixel_to_3Dpoint ${catkin_LIBRARIES})
+
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/realsense_bot.cpp
@@ -204,3 +208,7 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+
+add_executable(pixel_to_3Dpoint src/pixel_to_3Dpoint.cpp)
+target_link_libraries(pixel_to_3Dpoint ${catkin_LIBRARIES})

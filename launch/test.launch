@@ -1,0 +1,7 @@
+  <launch>
+
+
+    <node pkg="realsense_bot" type="pixel_to_3Dpoint" name="tf_broadcaster">
+    </node>
+
+  </launch>

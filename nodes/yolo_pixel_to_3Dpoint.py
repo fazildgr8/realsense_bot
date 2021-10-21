@@ -2,8 +2,6 @@
 import roslib
 import rospy
 import tf
-import math
-import random
 from darknet_ros_msgs.msg import BoundingBoxes,ObjectCount
 from sensor_msgs.msg import Image,CameraInfo
 import numpy as np
