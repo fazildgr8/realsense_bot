@@ -48,9 +48,13 @@ sudo apt-get install ros-$ROS_DISTRO-realsense2-description
 sudo apt install ros-$ROS_DISTRO-image-transport-plugins
 sudo apt install ros-$ROS_DISTRO-rtabmap-ros
 sudo apt install ros-$ROS_DISTRO-rosserial
+pip install pyrealsense2
+pip install opencv-python
+pip install 
 cd catkin_ws/src
 git clone https://github.com/ccny-ros-pkg/imu_tools
 git clone https://github.com/leggedrobotics/darknet_ros
 cd .
 catkin_make
 ```
+The **Arduino** code file required flashing can be found in `arduino/ros_servo_3dof.ino`
