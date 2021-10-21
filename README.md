@@ -57,5 +57,5 @@ git clone https://github.com/leggedrobotics/darknet_ros
 cd .
 catkin_make
 ```
-The **Arduino** code file required for flashing can be found in `arduino/ros_servo_3dof.ino`
+The **Arduino** code file required for flashing can be found in `arduino/ros_servo_3dof.ino` <br/>
 Connect the **three Servo's** signal pin the to `9 10 11` pins of the Arduino. The pin configuration can be modified within `ros_servo_3dof.ino` file. 
