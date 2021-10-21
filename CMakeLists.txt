@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   tf
+  darknet_ros_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -106,7 +107,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES realsense_bot
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+ CATKIN_DEPENDS roscpp rospy std_msgs darknet_ros_msgs
 #  DEPENDS system_lib
 )
 
@@ -211,4 +212,5 @@ include_directories(
 
 
 add_executable(pixel_to_3Dpoint src/pixel_to_3Dpoint.cpp)
+add_dependencies(pixel_to_3Dpoint ${catkin_EXPORTED_TARGETS})
 target_link_libraries(pixel_to_3Dpoint ${catkin_LIBRARIES})
