@@ -50,11 +50,10 @@ sudo apt install ros-$ROS_DISTRO-rtabmap-ros
 sudo apt install ros-$ROS_DISTRO-rosserial
 pip install pyrealsense2
 pip install opencv-python
-pip install 
 cd catkin_ws/src
 git clone https://github.com/ccny-ros-pkg/imu_tools
 git clone https://github.com/leggedrobotics/darknet_ros
-cd .
+cd ..
 catkin_make
 ```
 The **Arduino** code file required for flashing can be found in `arduino/ros_servo_3dof.ino` <br/>
