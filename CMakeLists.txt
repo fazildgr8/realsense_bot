@@ -211,6 +211,6 @@ include_directories(
 # catkin_add_nosetests(test)
 
 
-add_executable(pixel_to_3Dpoint src/pixel_to_3Dpoint.cpp)
-add_dependencies(pixel_to_3Dpoint ${catkin_EXPORTED_TARGETS})
-target_link_libraries(pixel_to_3Dpoint ${catkin_LIBRARIES})
+add_executable(yolo_objects_broadcaster src/yolo_objects_broadcaster.cpp)
+add_dependencies(yolo_objects_broadcaster ${catkin_EXPORTED_TARGETS})
+target_link_libraries(yolo_objects_broadcaster ${catkin_LIBRARIES})

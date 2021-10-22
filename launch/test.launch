@@ -37,7 +37,7 @@
     <param name="autosize" value="true" />
   </node>
 
-    <node pkg="realsense_bot" type="pixel_to_3Dpoint" name="tf_broadcaster" output="screen">
-    </node>
+    <!-- <node pkg="realsense_bot" type="pixel_to_3Dpoint" name="tf_broadcaster" output="screen">
+    </node> -->
 
   </launch>
