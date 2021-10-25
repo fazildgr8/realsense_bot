@@ -2,7 +2,8 @@
 This is a ROS package for Intel realsense D435i with 3-DOF Manipulator robot that can be used for Indoor Mapping and localization of objects in the world frame with an added advantage of the robot's dexterity. The 3-DOF Manipulator is a self-built custom robot where the URDF with the depth sensor is included. The package covers the Rosserial communication with Arduino nodes to control the robot's Joint States and PCL pipelines required for autonomous mapping/Localization/Tracking of the objects in real-time. <br/>
 
 ## Robot URDF and Actual Model
-The Robot's URDF model represents the exact simplified version of the actual model with measured offsets from joint to joint.
+The Robot's URDF model represents the exact simplified version of the actual model with measured offsets from joint to joint. </br>
+The RRR Robot is built using standard servo 3 x Clamps,1 x Long U Mount and 45deg U Mount. 
 <img src="https://user-images.githubusercontent.com/24454678/138737126-afb4df6c-f03a-4bc6-a14d-1eecad08203b.PNG" width="800">
 
 ## Manual Joint Control with PCL Perception
@@ -65,7 +66,6 @@ cd ..
 catkin_make
 ```
 ### Arduino
-The RRR Robot is built using standard servo 3 x Clamps,1 x Long U Mount and 45deg U Mount. <br/>
 The **Arduino** code file required for flashing can be found in `arduino/ros_servo_3dof.ino` <br/>
 Connect the **three Servo's** signal pin the to `9 10 11` pins of the Arduino. The pin configuration can be modified within `ros_servo_3dof.ino`.
 </br>
