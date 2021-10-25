@@ -15,7 +15,7 @@ roslaunch realsense_bot robot_visualize_control.launch
 ```
 roslaunch realsense2_camera rs_camera.launch filters:=pointcloud align_depth:=true depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=30
 ```
-![manual_perception](https://user-images.githubusercontent.com/24454678/138002158-53b967c4-bc66-44af-9593-714cdea28551.gif)
+<img src="https://user-images.githubusercontent.com/24454678/138002158-53b967c4-bc66-44af-9593-714cdea28551.gif" width="1000">
 
 ## Autonomous Object Tracking using YoloV3 and 2D to 3D deprojection with Pose Estimation 
 Launch the Yolo detector node to produce Object Detection and Bounding Boxes Messages
