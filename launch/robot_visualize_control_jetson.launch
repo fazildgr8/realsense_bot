@@ -1,0 +1,25 @@
+  <launch>
+
+  <arg name="gui" default="true" />
+  <arg name="model" default="$(find realsense_bot)/urdf/robot.urdf"/>
+  <arg name="rvizconfig" default="$(find realsense_bot)/rviz/urdf.rviz" />
+  <param name="robot_description" command="$(find xacro)/xacro $(find realsense_bot)/urdf/realsense_bot.urdf" />
+
+
+    <node pkg="realsense_bot" type="servokit_control.py" 
+          name="jointState_to_servo" output="screen"/>
+    
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" >
+    <rosparam param="source_list">["joint_states_ct"]</rosparam>
+</node>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <remap from="/joint_states" to="/realsense_bot/joint_states" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+
+    
+  </launch>
