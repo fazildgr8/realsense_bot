@@ -49,8 +49,8 @@ roslaunch realsense_bot realsense_mapping.launch
 <img src="https://user-images.githubusercontent.com/24454678/138003662-a99dd86d-7da0-41cf-b990-0128b07e2461.png" width="1000">
 
 ## Robot Setup
-- The setup for PC with Arduino control uses serial communication to control the servos through the Arduino which is capable producing PWM signals.
-- The setup and installation differs for the Jeston boards for using it standalone as GPIO pins present wouldnt be able to produce PWM signals for the servo motors instead we will be using a Servo Controller board which uses **I2C** protocol to control the Servos.
+- **Direct Implementation** - The setup for PC with Arduino control uses **serial communication** to control the servos through the Arduino which is capable producing PWM signals.
+- **Jetson Nano Standalone Implementation** - The setup and installation differs for the Jeston boards for using it standalone as GPIO pins present wouldnt be able to produce PWM signals for the servo motors instead we will be using a Servo Controller board which uses **I2C** protocol to control the Servos.
 
 
 ### Setup Info (PC + Arduino Control)
