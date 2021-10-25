@@ -3,7 +3,6 @@ This is a ROS package for Intel realsense D435i with 3-DOF Manipulator robot tha
 
 ## Robot URDF and Actual Model
 The Robot's URDF model represents the exact simplified version of the actual model with measured offsets from joint to joint.
-<!-- ![ROBOT_Description](https://user-images.githubusercontent.com/24454678/138737126-afb4df6c-f03a-4bc6-a14d-1eecad08203b.PNG?v=4&s=200) -->
 ![ROBOT_Description]<img src="https://user-images.githubusercontent.com/24454678/138737126-afb4df6c-f03a-4bc6-a14d-1eecad08203b.PNG" width="800">
 
 ## Manual Joint Control with PCL Perception
