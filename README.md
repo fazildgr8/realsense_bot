@@ -45,7 +45,7 @@ roslaunch realsense_bot realsense_mapping.launch
 ```
 <img src="https://user-images.githubusercontent.com/24454678/138001579-007b174b-27c4-4620-b38a-7e0a500d18b2.gif" width="1000">
 </br>
-![rtab_mapping_graph](https://user-images.githubusercontent.com/24454678/138003662-a99dd86d-7da0-41cf-b990-0128b07e2461.png)
+<img src="https://user-images.githubusercontent.com/24454678/138003662-a99dd86d-7da0-41cf-b990-0128b07e2461.png" width="1000">
 
 ## Setup Info
 ### ROS/Python Library Prerequisites
