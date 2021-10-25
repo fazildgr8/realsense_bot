@@ -63,7 +63,7 @@ git clone https://github.com/leggedrobotics/darknet_ros
 cd ..
 catkin_make
 ```
-### Building the Robot
+### Building the Robot (PC + Arduino Control)
 The RRR Robot is built using standard servo 3 x Clamps,1 x Long U Mount and 45deg U Mount. <br/>
 The **Arduino** code file required for flashing can be found in `arduino/ros_servo_3dof.ino` <br/>
 Connect the **three Servo's** signal pin the to `9 10 11` pins of the Arduino. The pin configuration can be modified within `ros_servo_3dof.ino`.
