@@ -4,6 +4,7 @@ This is a ROS package for Intel realsense D435i with 3-DOF Manipulator robot tha
 ## Robot URDF and Actual Model
 The Robot's URDF model represents the exact simplified version of the actual model with measured offsets from joint to joint.
 ![ROBOT_Description](https://user-images.githubusercontent.com/24454678/138737126-afb4df6c-f03a-4bc6-a14d-1eecad08203b.PNG?v=4&s=200)
+![ROBOT_Description]<img src="https://user-images.githubusercontent.com/24454678/138737126-afb4df6c-f03a-4bc6-a14d-1eecad08203b.PNG" width="400">
 
 ## Manual Joint Control with PCL Perception
 **Launch the Robot in RVIZ with Manual Joint Control.** </br> This Launch file starts the Robot state publisher which updates the Transformation tree using the Joint states from Joint state publisher. The Robot can be Controlled manually by publishing the Joint states message to the Joint State Controller.
