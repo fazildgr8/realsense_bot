@@ -1,16 +1,17 @@
 # realsense_bot
 This is a ROS package for Intel realsense D435i with 3-DOF Manipulator robot that can be used for Indoor Mapping and localization of objects in the world frame with an added advantage of the robot's dexterity. The 3-DOF Manipulator is a self-built custom robot where the URDF with the depth sensor is included. The package covers the Rosserial communication with Arduino nodes to control the robot's Joint States and PCL pipelines required for autonomous mapping/Localization/Tracking of the objects in real-time. <br/>
 
-## Robot URDF Model
-![ROBOT_Description](https://user-images.githubusercontent.com/24454678/138001080-06d19e65-3412-4b5f-99dd-e5860527b5dc.png)
+## Robot URDF and Actual Model
+The Robot's URDF model represents the exact simplified version of the actual model with measured offsets from joint to joint.
+![ROBOT_Description](https://user-images.githubusercontent.com/24454678/138737126-afb4df6c-f03a-4bc6-a14d-1eecad08203b.PNG)
 
 ## Manual Joint Control with PCL Perception
-Launch the Robot in RVIZ with Manual Joint Control
+**Launch the Robot in RVIZ with Manual Joint Control.** </br> This Launch file starts the Robot state publisher which updates the Transformation tree using the Joint states from Joint state publisher. The Robot can be Controlled manually by publishing the Joint states message to the Joint State Controller.
 ```
 roslaunch realsense_bot robot_visualize_control.launch
 ```
 
-Launch the IntelRealsense Camera node to start the PCL Perception
+**Launch the IntelRealsense Camera node to start the PCL Perception** </br> This Launch file starts the IntelRealsense camera node which publishes all the messages w.r.t to the Realsense Camera.
 ```
 roslaunch realsense2_camera rs_camera.launch filters:=pointcloud align_depth:=true depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=30
 ```
