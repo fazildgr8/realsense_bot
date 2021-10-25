@@ -29,11 +29,14 @@ Launch the node which deprojects the 2D detected object in 3D using rs2_pixel_to
 ```
 rosrun realsense_bot yolo_pixel_to_3Dpoint.py
 ```
+
 Launch the node which follows and tracks the Object using the 3-DOF Manipulator
 ```
 rosrun realsense_bot object_follow.py
 ```
-![object_following](https://user-images.githubusercontent.com/24454678/138001224-60c70811-e5c0-4361-8236-de49b074e4ec.gif)
+<img src="https://user-images.githubusercontent.com/24454678/138001224-60c70811-e5c0-4361-8236-de49b074e4ec.gif" width="1000">
+
+
 ## 3-DOF Dexterity based RTAB Mapping with Madwick IMU Filter
 Launch the below mentioned seperately to begin RTAB-Mapping with Madwick IMU Filter and RVIZ representation of the Cloud Map.
 ```
