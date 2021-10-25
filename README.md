@@ -23,6 +23,8 @@ roslaunch yolo_detect.launch
 ```
 Launch the node which deprojects the 2D detected object in 3D using rs2_pixel_to_point_deprojection(...) with the Node **/yolo_pixel_to_3Dpoint**
 ![pose_estimation_graph](https://user-images.githubusercontent.com/24454678/138003646-bfd8a96f-2faa-4301-a390-e48fd1e22078.png)
+![yolo_depth](https://user-images.githubusercontent.com/24454678/138730293-4cc3b186-c700-404c-8ac8-941fee765d76.PNG)
+![3D_pose_estimation_node](https://user-images.githubusercontent.com/24454678/138730310-3efdbd04-1c2e-407d-a012-e316cdfee15a.PNG)
 ```
 rosrun realsense_bot yolo_pixel_to_3Dpoint.py
 ```
@@ -56,5 +58,7 @@ git clone https://github.com/leggedrobotics/darknet_ros
 cd ..
 catkin_make
 ```
+### Building the Robot
+The RRR Robot is built using standard servo 3 x Clamps,1 x Long U Mount and 45deg U Mount. <br/>
 The **Arduino** code file required for flashing can be found in `arduino/ros_servo_3dof.ino` <br/>
 Connect the **three Servo's** signal pin the to `9 10 11` pins of the Arduino. The pin configuration can be modified within `ros_servo_3dof.ino`.
