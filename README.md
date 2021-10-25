@@ -48,10 +48,13 @@ roslaunch realsense_bot realsense_mapping.launch
 </br>
 <img src="https://user-images.githubusercontent.com/24454678/138003662-a99dd86d-7da0-41cf-b990-0128b07e2461.png" width="1000">
 
-## Setup Info (PC + Arduino Control)
--The setup for PC with Arduino control uses serial communication to control the servos through the Arduino which is capable producing PWM signals.
--The setup and installation differs for the Jeston boards for using it standalone as GPIO pins present wouldnt be able to produce PWM signals for the servo motors instead we will be using a Servo Controller board which uses **I2C** protocol to control the Servos.
-### ROS/Python Library Prerequisites
+## Robot Setup
+- The setup for PC with Arduino control uses serial communication to control the servos through the Arduino which is capable producing PWM signals.
+- The setup and installation differs for the Jeston boards for using it standalone as GPIO pins present wouldnt be able to produce PWM signals for the servo motors instead we will be using a Servo Controller board which uses **I2C** protocol to control the Servos.
+
+
+### Setup Info (PC + Arduino Control)
+#### ROS/Python Library Prerequisites
 ```
 sudo apt-get install ros-$ROS_DISTRO-realsense2-camera
 sudo apt-get install ros-$ROS_DISTRO-realsense2-description
@@ -67,7 +70,7 @@ git clone https://github.com/leggedrobotics/darknet_ros
 cd ..
 catkin_make
 ```
-### Arduino
+#### Arduino
 The **Arduino** code file required for flashing can be found in `arduino/ros_servo_3dof.ino` <br/>
 Connect the **three Servo's** signal pin the to `9 10 11` pins of the Arduino. The pin configuration can be modified within `ros_servo_3dof.ino`.
 </br>
