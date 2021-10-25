@@ -55,6 +55,7 @@ sudo apt-get install ros-$ROS_DISTRO-realsense2-description
 sudo apt install ros-$ROS_DISTRO-image-transport-plugins
 sudo apt install ros-$ROS_DISTRO-rtabmap-ros
 sudo apt install ros-$ROS_DISTRO-rosserial
+sudo apt install ros-$ROS_DISTRO-joint-state-publisher-gui
 pip install pyrealsense2
 pip install opencv-python
 cd catkin_ws/src
