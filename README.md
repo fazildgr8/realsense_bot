@@ -40,7 +40,7 @@ Launch the below mentioned seperately to begin RTAB-Mapping with Madwick IMU Fil
 roslaunch realsense_bot robot_visualize_control.launch
 roslaunch realsense_bot realsense_mapping.launch
 ```
-![rtab_map_room](https://user-images.githubusercontent.com/24454678/138001579-007b174b-27c4-4620-b38a-7e0a500d18b2.gif?&s=200)
+![rtab_map_room](https://user-images.githubusercontent.com/24454678/138001579-007b174b-27c4-4620-b38a-7e0a500d18b2.gif?&s=1000)
 ![rtab_mapping_graph](https://user-images.githubusercontent.com/24454678/138003662-a99dd86d-7da0-41cf-b990-0128b07e2461.png)
 
 ## Setup Info
