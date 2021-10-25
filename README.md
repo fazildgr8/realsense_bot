@@ -47,7 +47,7 @@ roslaunch realsense_bot realsense_mapping.launch
 </br>
 <img src="https://user-images.githubusercontent.com/24454678/138003662-a99dd86d-7da0-41cf-b990-0128b07e2461.png" width="1000">
 
-## Setup Info
+## Setup Info (PC + Arduino Control)
 ### ROS/Python Library Prerequisites
 ```
 sudo apt-get install ros-$ROS_DISTRO-realsense2-camera
@@ -64,7 +64,7 @@ git clone https://github.com/leggedrobotics/darknet_ros
 cd ..
 catkin_make
 ```
-### Building the Robot (PC + Arduino Control)
+### Arduino
 The RRR Robot is built using standard servo 3 x Clamps,1 x Long U Mount and 45deg U Mount. <br/>
 The **Arduino** code file required for flashing can be found in `arduino/ros_servo_3dof.ino` <br/>
 Connect the **three Servo's** signal pin the to `9 10 11` pins of the Arduino. The pin configuration can be modified within `ros_servo_3dof.ino`.
