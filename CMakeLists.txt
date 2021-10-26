@@ -208,7 +208,3 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-
-
-add_executable(pixel_to_3Dpoint src/pixel_to_3Dpoint.cpp)
-target_link_libraries(pixel_to_3Dpoint ${catkin_LIBRARIES})
