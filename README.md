@@ -75,3 +75,6 @@ The **Arduino** code file required for flashing can be found in `arduino/ros_ser
 Connect the **three Servo's** signal pin the to `9 10 11` pins of the Arduino. The pin configuration can be modified within `ros_servo_3dof.ino`.
 </br>
 <img src="https://user-images.githubusercontent.com/24454678/138738121-74b71943-e564-4657-9281-a8921cb3625a.png" width="450">
+
+#### Jetson Nano
+<img src="https://user-images.githubusercontent.com/24454678/138787452-f5b73b7e-4b6d-442b-ac4b-dda14786f8d3.PNG" width="450">
