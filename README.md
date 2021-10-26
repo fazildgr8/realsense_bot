@@ -106,5 +106,5 @@ Connect the **three Servo's** signal pin the to `9 10 11` pins of the Arduino. T
 
 ### Setup Info - Jetson Nano
 #### Jetson Nano
-<img src="https://user-images.githubusercontent.com/24454678/138787452-f5b73b7e-4b6d-442b-ac4b-dda14786f8d3.PNG" width="450">
+<img src="https://user-images.githubusercontent.com/24454678/138797674-849eb349-e4df-4a23-9f45-fc82907b3ed7.PNG" width="450">
 
