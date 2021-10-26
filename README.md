@@ -6,8 +6,27 @@ The Robot's URDF model represents the exact simplified version of the actual mod
 The RRR Robot is built using standard servo 3 x Clamps,1 x Long U Mount and 45deg U Mount. 
 <img src="https://user-images.githubusercontent.com/24454678/138737126-afb4df6c-f03a-4bc6-a14d-1eecad08203b.PNG" width="800">
 
+## Jetson Nano Standalone Implementation
+```
+cd catkin_ws/src
+git clone https://github.com/fazildgr8/realsense_bot -b jetson
+```
+## PC Arduino Implementation
+```
+cd catkin_ws/src
+git clone https://github.com/fazildgr8/realsense_bot -b master
+```
+
 ## Manual Joint Control with PCL Perception
-**Launch the Robot in RVIZ with Manual Joint Control.** </br> This Launch file starts the Robot state publisher which updates the Transformation tree using the Joint states from Joint state publisher. The Robot can be Controlled manually by publishing the Joint states message to the Joint State Controller.
+**Launch the Robot in RVIZ with Manual Joint Control.** </br> This Launch file starts the Robot state publisher which updates the Transformation tree using the Joint states from Joint state publisher. The Robot can be Controlled manually by publishing the Joint states message to the Joint State Controller. 
+</br>
+
+For **Jetson Nano** Implementation execute the below mentioned
+```
+roslaunch realsense_bot robot_visualize_control_jetson.launch
+```
+</br>
+For **PC+Arduino** Implementation execute the below mentioned 
 ```
 roslaunch realsense_bot robot_visualize_control.launch
 ```
