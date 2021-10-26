@@ -84,7 +84,7 @@ sudo apt install ros-$ROS_DISTRO-joint-state-publisher-gui
 pip install pyrealsense2
 pip install opencv-python
 cd catkin_ws/src
-git clone https://github.com/ccny-ros-pkg/imu_tools
+git clone https://github.com/ccny-ros-pkg/imu_tools -b $ROS_DISTRO
 git clone https://github.com/leggedrobotics/darknet_ros
 cd ..
 catkin_make
