@@ -1,5 +1,6 @@
 # realsense_bot
 This is a ROS package for Intel realsense D435i with 3-DOF Manipulator robot that can be used for Indoor Mapping and localization of objects in the world frame with an added advantage of the robot's dexterity. The 3-DOF Manipulator is a self-built custom robot where the URDF with the depth sensor is included. The package covers the Rosserial communication with Arduino nodes or I2C with the Jetson Nano to control the robot's Joint States and PCL pipelines required for autonomous mapping/Localization/Tracking of the objects in real-time. <br/>
+<img src="https://user-images.githubusercontent.com/24454678/138940187-ebf82bbe-8ebc-4dda-8a9d-005dba85545d.png" width="600">
 
 ## Robot URDF and Actual Model
 The Robot's URDF model represents the exact simplified version of the actual model with measured offsets from joint to joint. </br>
