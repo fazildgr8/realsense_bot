@@ -85,7 +85,16 @@ pip install pyrealsense2
 pip install opencv-python
 cd catkin_ws/src
 git clone https://github.com/ccny-ros-pkg/imu_tools -b $ROS_DISTRO
-git clone https://github.com/leggedrobotics/darknet_ros
+cd ..
+catkin_make
+```
+**Installing darknet_ros package** which is the YoloV3 implementation as a ROS Node.
+On Cuda set up systems make sure to modify the `CMakeLists.txt` within the `darknet_ros` package to support compute capability of your systems. For details please go through
+[darknet_ros Official Package](https://github.com/leggedrobotics/darknet_ros)
+```
+cd catkin_ws/src
+git clone https://github.com/ccny-ros-pkg/imu_tools -b $ROS_DISTRO
+git clone --recursive git@github.com:leggedrobotics/darknet_ros.git
 cd ..
 catkin_make
 ```
