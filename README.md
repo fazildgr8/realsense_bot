@@ -26,7 +26,6 @@ For **Jetson Nano** Implementation execute the below mentioned
 ```
 roslaunch realsense_bot robot_visualize_control_jetson.launch
 ```
-</br>
 For **PC+Arduino** Implementation execute the below mentioned 
 ```
 roslaunch realsense_bot robot_visualize_control.launch
